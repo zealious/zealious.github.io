@@ -1,6 +1,5 @@
 ---
 title: "Welcome to Howoo Blog!"
-date: 2018-08-09 10:52:28 -0400
 categories: Blog First
 ---
 
