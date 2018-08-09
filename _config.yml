@@ -30,7 +30,7 @@ comments:
   #provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   provider               : "disqus"
   disqus:
-    shortname            :  dev-hundred-blog
+      #shortname            :  dev-hundred-blog
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
