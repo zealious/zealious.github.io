@@ -267,6 +267,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments:  true
+      comments:  true  #댓글여부
       share: true
       related: true
+      toc: true #사이드 메뉴
