@@ -20,7 +20,7 @@ docs:
     children:
       - title: "Hoyoung"
         url : /categories/
-      - titme: "tag"
+      - title: "tag"
         url : /tags/
       - title: "Posts by year"
         url : /year-archvie/
