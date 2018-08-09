@@ -1,6 +1,7 @@
 ---
 title: "Welcome to Howoo Blog!"
 categories: Blog First
+tag : Python
 ---
 
 안녕하세요 제 첫 블로그 게시글입니다.
