@@ -2,6 +2,7 @@
 title: "Welcome to Howoo Blog!"
 date: 2018-08-09 12:00:28
 categories: Blog First
+tag : Post
 ---
 
 안녕하세요 제 첫 블로그 게시글입니다.
