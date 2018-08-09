@@ -8,9 +8,19 @@ main:
     url: /year-archive/
   - title: "tag"
     url: /tags/
+    
   - title: "Category"
     url: /categories/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+docs:
+  - title: "Quick-Start Guide11"
+    children:
+      - title: "Hoyoung"
+        url : /categories/
+      - titme: "tag"
+        url : /tags/
+      - title: "Posts by year"
+        url : /year-archvie/
