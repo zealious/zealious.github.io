@@ -1,12 +1,6 @@
 ---
 title: "Welcome to Howoo Blog!"
 tag : Python
-header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/background.png
-  cta_label: "<i class='fas fa-download'></i> Install Now"
-  cta_url:
-  caption:
 ---
 
 안녕하세요 제 첫 블로그 게시글입니다.
