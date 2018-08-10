@@ -1,6 +1,5 @@
 ---
 title: "Welcome to Howoo Blog!"
-categories: Blog First
 tag : Python
 header:
   overlay_color: "#5e616c"
