@@ -18,7 +18,7 @@ jekyll serve
 
 
 
-```ruby
+```liquid
 jekyll serve
 ```
 
