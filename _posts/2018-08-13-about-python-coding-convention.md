@@ -38,13 +38,17 @@ PEP(Python Enhance Proposal)이란 파이썬을 개선하기 위한 개선 제�
 > A Foolish Consistency is the Hobgoblin of Little Minds  
   멍청하게 일관성을 유지하는것은 소인배의 발상이다.
 
-우리가 정한 기준은 있지만 때로는 그 기준을 따라갈 필요가 없다는 얘기입니다.
-4가지 정도의 기준이 있는데요.
+우리가 정한 기준은 있지만 때로는 그 기준을 따라갈 필요가 없다는 얘기입니다.  
+예외에대한 4가지 정도의 기준이 있는데요. 아마도 1,2번의 경우가 많을 것 같습니다.
 > Some other good reasons to ignore a particular guideline:  
->  1. When applying the guideline would make the code less readable, even for someone who is used to reading code that follows this PEP.  
+>  1. When applying the guideline would make the code less readable, even for someone who is used to reading code that follows this PEP. 
+>     PEP8 기준을 잘 알고 있는 사람이라도 읽기 쉬울 경우
 >  2. To be consistent with surrounding code that also breaks it (maybe for historic reasons) -- although this is also an opportunity to clean up someone else's mess (in true XP style).  
+>     주변코드와 일관성을 위해(옛날부터 작성되었던 기준에 따라가서)
 >  3. Because the code in question predates the introduction of the guideline and there is no other reason to be modifying that code.  
+>     스타일가이드 도입 이전에 작성되었을경우 수정할 필요가없다??(해석이잘안됨)
 >  4. When the code needs to remain compatible with older versions of Python that don't support the feature recommended by the style guide.  
+>     스타일 가이드에서 권장하는 기능을 지원하지 않는 이전버전의 파이썬과 호환되도록 해야할 경우
 
 
 
