@@ -4,7 +4,7 @@ tag : Python
 ---
 
 
-# Coding Convention  
+## Coding Convention  
 
 
 [코딩 컨벤션][codingconventionwiki]이란 개념은 무엇일까?
@@ -16,7 +16,7 @@ tag : Python
 
 지금부터 살펴볼 코딩컨벤션은 파이썬의 [PEP8][PEP8]이다.
 
-# PEP?  
+## PEP?  
 
 
 PEP(Python Enhance Proposal)이란 파이썬을 개선하기 위한 개선 제안서입니다.  
