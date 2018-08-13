@@ -16,24 +16,24 @@ jekyll serve
 jekyll serve
 ```
 
-
-
+{% raw %}
 ```liquid
 ---
 layout: archive
-permalink: /categories/
-title: "Posts by Category"
+permalink: /year-archive/
+title: "Posts by Year"
 author_profile: true
 ---
-{% include group-by-array collection=site.posts field="categories" %}
-{% for category in group_names %}
-  {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ category | slugify }}" class="archive__subtitle">{{ category }}</h2>
-  {% for post in posts %}
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in postsByYear %}
+  <h2 id="{{ year.name | slugify }}" class="archive__subtitle">{{ year.name }}</h2>
+  {% for post in year.items %}
     {% include archive-single.html %}
   {% endfor %}
 {% endfor %}
 ```
+{% endraw %}
+
 
 
 ```abap
