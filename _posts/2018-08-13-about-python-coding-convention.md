@@ -19,8 +19,6 @@ jekyll serve
 
 
 ```liquid
-jekyll serve
-
 ---
 layout: archive
 permalink: /categories/
