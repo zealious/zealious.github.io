@@ -11,4 +11,4 @@ tag : Python
 
 
 
-[codingconventionwiki]:(https://en.wikipedia.org/wiki/Coding_conventions)
+[codingconventionwiki]:https://en.wikipedia.org/wiki/Coding_conventions
