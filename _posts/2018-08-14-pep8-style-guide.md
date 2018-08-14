@@ -1,5 +1,5 @@
 ---
-title: "파이썬 코딩 컨벤션"
+title: "PEP8 Style Guide"
 tag : Python
 ---
 
