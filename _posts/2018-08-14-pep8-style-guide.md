@@ -112,6 +112,22 @@ my_list = [
 대신 with절을 사용할 경우 백슬러시를 사용할 수 있습니다.  
 
 
+## Should a Line Break Before or After a Binary Operator?(줄바꿈은 연산자 전에 해야하나 후에해야하나?)
+
+수십년동안 연산자 뒤에서 줄바꿈을 해왔지만 가독성문제로 연사자 앞에서 줄바꿈을 한다.
+
+```yml
+easy to match operators with operands
+income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)
+```
+
+##
+
+
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
 [hangingindent]: https://www.python.org/dev/peps/pep-0008/#fn-hi
