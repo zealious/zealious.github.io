@@ -25,18 +25,32 @@ tag : Python
 howoo = long_function_name(var_one, var_two,
                            var_three, var_four)
 
-# More indentation included to distinguish this from the rest.(나머지와 구별하기위해 더 많은 들여쓰기를 합니다.
+# More indentation included to distinguish this from the rest.(나머지와 구별하기위해 더 많은 들여쓰기를 합니다.)
 def howoo_function(
         var_one, var_two, var_three,
         var_four):
     print(var_one)
 
 # Hanging indents should add a level.
-foo = long_function_name(
+howoo = howoo_function(
     var_one, var_two,
     var_three, var_four)
 ```
 
+잘못된 예시)
+
+```
+# Arguments on first line forbidden when not using vertical alignment.(세로정렬을 하지 않을떄는 첫번째라인의 인자는 금지된다)
+foo = long_function_name(var_one, var_two,
+    var_three, var_four)
+
+# Further indentation required as indentation is not distinguishable.(들여쓰기를 구분할 수 없을때 들여쓰기가 더 필요하다)
+def long_function_name(
+    var_one, var_two, var_three,
+    var_four):
+    print(var_one)
+```
+    
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
