@@ -20,11 +20,9 @@ tag : Python
 PEP(Python Enhance Proposal)이란 파이썬을 개선하기 위한 개선 제안서입니다.  
 이 제안서는 3가지로 구분이 되는데요.  
 
-> 1) Standard Track : 파이썬의 새로운 기능이나 구현을 제안
-
-> 2) Informational : 파이썬의 디자인 이슈나 일반적인 지침을 제안
-
-> 3) Process : 파이썬 커뮤니티에 정보를 제안
+> 1. Standard Track : 파이썬의 새로운 기능이나 구현을 제안
+> 2. Informational : 파이썬의 디자인 이슈나 일반적인 지침을 제안
+> 3. Process : 파이썬 커뮤니티에 정보를 제안
 
 자세한 내용은 PEP에 대해 다루고 있는 PEP인 [PEP 1][PEP1]을 참고하세요.
 파이썬 코딩 컨벤션인 [PEP 8][PEP8]은 Process에 해당합니다.
