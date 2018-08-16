@@ -114,7 +114,7 @@ my_list = [
 
 ## 줄바꿈은 연산자 전에 해야하나 후에해야하나?
 
-연사자 앞에서 줄바꿈을 한다.
+앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.
 
 ```yml
 easy to match operators with operands
@@ -125,7 +125,35 @@ income = (gross_wages
           - student_loan_interest)
 ```
 
-##
+## Imports
+
+import는 보통 한줄에 하나씩 쓰입니다.
+import는 파일의 맨위 주석 및 docstirings 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
+```yml
+import os
+import sys
+
+#from이 있을경우는 괜찮습니다.
+from subprocess import Popen, PIPE
+```
+
+import 는 다음과같이 그룹화 되어야합니다.  
+
+> 1) Standard library imports.
+> 2)Related third party imports.
+> 3)Local application/library specific imports.
+
+각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
+절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
+
+```yml
+import mypkg.sibling
+from mypkg import sibling
+from mypkg.sibling import example
+```
+
+그러나 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports는 절대경로 imports에 대안으로 받아들여질 수 있습니다.
+
 
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
