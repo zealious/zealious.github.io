@@ -139,9 +139,9 @@ from subprocess import Popen, PIPE
 
 import 는 다음과같이 그룹화 되어야합니다.  
 
-> 1) Standard library imports.
-> 2)Related third party imports.
-> 3)Local application/library specific imports.
+> 1) Standard library imports.  
+> 2)Related third party imports.  
+> 3)Local application/library specific imports.  
 
 각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
 절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
