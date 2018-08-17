@@ -1,5 +1,5 @@
 ---
-title: "파이썬 코딩 컨벤션"
+title: "코딩 컨벤션(Coding Covention)"
 tag : Python
 ---
 
