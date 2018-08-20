@@ -136,7 +136,7 @@ import sys
 #from이 있을경우는 괜찮습니다.
 from subprocess import Popen, PIPE
 ```
-#import는 파일의 맨위 주석 및 docstirings 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
+#import는 파일의 맨위 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
 import 는 다음과같이 그룹화 되어야합니다.  
 
 > 1) Standard library imports.  
@@ -184,6 +184,40 @@ import foo.bar.yourclass
 # 와일드카드(*) import는 절대 사용하지않는다. (해석이 잘안됨..)
 Wildcard imports (from <module> import *) should be avoided, as they make it unclear which names are present in the namespace, confusing both readers and many automated tools. There is one defensible use case for a wildcard import, which is to republish an internal interface as part of a public API (for example, overwriting a pure Python implementation of an interface with the definitions from an optional accelerator module and exactly which definitions will be overwritten isn't known in advance).
 
+## Module Level Dunder Names
+
+__all__, __author__, __version__ 등과 같은 모듈 수준의 "dunders"(즉 앞뒤 두 개의 밑줄이있는 이름)는 모듈 docstring 뒤에 있지만  
+__future__ imports를 제외한 모든 import 문 앞에 있어야합니다.   
+파이썬은 future-imports는 반드시 모듈에 docstrings을 제외한 다른 코드보다 앞에 나타나야한다고 합니다.
+
+```yml
+
+"""This is the example module.
+
+This module does stuff.
+"""
+
+from __future__ import barry_as_FLUFL
+
+__all__ = ['a', 'b', 'c']
+__version__ = '0.1'
+__author__ = 'Cardinal Biggles'
+
+import os
+import sys
+
+```
+
+## String Quotes
+
+파이썬에서는 작은 따옴표로 묶인 문자열과 큰 따옴표로 묶은 문자열이 동일합니다.    
+그러나 문자열에 작은 따옴표 나 큰 따옴표가 포함되어 있으면 다른 문자열을 사용하여 문자열의 백 슬래시를 방지하십시오.  
+가독성이 향상됩니다.
+
+삼중 따옴표로 묶인 문자열의 경우, 큰 따옴표 문자를 사용하여 [PEP 257][pep257]의 문서 문자열 규칙과 일관되게하십시오.
+
+
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
 [hangingindent]: https://www.python.org/dev/peps/pep-0008/#fn-hi
+[pep257]: https://www.python.org/dev/peps/pep-0257/
