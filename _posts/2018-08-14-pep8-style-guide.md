@@ -127,8 +127,8 @@ income = (gross_wages
 
 ## Imports
 
-import는 보통 한줄에 하나씩 쓰입니다.
-import는 파일의 맨위 주석 및 docstirings 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
+#import는 보통 한줄에 하나씩 쓰입니다.
+
 ```yml
 import os
 import sys
@@ -136,15 +136,16 @@ import sys
 #from이 있을경우는 괜찮습니다.
 from subprocess import Popen, PIPE
 ```
-
+#import는 파일의 맨위 주석 및 docstirings 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
 import 는 다음과같이 그룹화 되어야합니다.  
 
 > 1) Standard library imports.  
-> 2)Related third party imports.  
-> 3)Local application/library specific imports.  
+> 2) Related third party imports.  
+> 3) Local application/library specific imports.  
 
 각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
-절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
+
+#절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
 
 ```yml
 import mypkg.sibling
@@ -154,7 +155,33 @@ from mypkg.sibling import example
 
 그러나 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports는 절대경로 imports에 대안으로 받아들여질 수 있습니다.
 
+```yml
+from . import sibling
+from .sibling import example
+```
 
+Standard library code는 복잡한 패키지 레이아웃을 피하고 항상 절대 import를 사용해야합니다.
+
+묵시적인 상대적인 import는 결코 사용되어서는 안되며 Python 3에서는 제거되었습니다.
+
+
+# 클래스가 정의된 모듈에서클래스를 import할 경우 보통 아래 처럼 사용합니다.
+
+```yml
+from myclass import MyClass
+from foo.bar.yourclass import YourClass
+```
+
+만약 이 경우 지역변수가 충돌된다면 아래와 같이 사용합니다.
+
+```yml
+import myclass
+import foo.bar.yourclass
+```
+
+ "myclass.MyClass"  "foo.bar.yourclass.YourClass".와 같이 사용합니다.
+
+# 와일드카드(*) import는 절대 사용하지않는다
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
