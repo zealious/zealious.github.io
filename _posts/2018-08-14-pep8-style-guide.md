@@ -181,7 +181,8 @@ import foo.bar.yourclass
 
  "myclass.MyClass"  "foo.bar.yourclass.YourClass".와 같이 사용합니다.
 
-# 와일드카드(*) import는 절대 사용하지않는다
+# 와일드카드(*) import는 절대 사용하지않는다. (해석이 잘안됨..)
+Wildcard imports (from <module> import *) should be avoided, as they make it unclear which names are present in the namespace, confusing both readers and many automated tools. There is one defensible use case for a wildcard import, which is to republish an internal interface as part of a public API (for example, overwriting a pure Python implementation of an interface with the definitions from an optional accelerator module and exactly which definitions will be overwritten isn't known in advance).
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
