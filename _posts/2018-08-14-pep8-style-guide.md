@@ -316,6 +316,7 @@ submitted +=1
 x = x * 2 - 1
 hypot2 = x * x + y * y
 c = (a + b) * (a - b)
+
 ```
 
 - Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
@@ -328,6 +329,7 @@ No:
 
 def complex(real, imag = 0.0):
     return magic(r = real, i = imag)
+    
 ```
 
 - Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
@@ -340,6 +342,7 @@ No:
 
 def munge(input:AnyStr): ...
 def munge()->PosInt: ...
+
 ```
 
 - When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
@@ -353,7 +356,9 @@ No:
 def munge(input: AnyStr=None): ...
 def munge(input: AnyStr, limit = 1000): ...
 Compound statements (multiple statements on the same line) are generally discouraged.
+
 ```
+
 ```yml
 Yes:
 
@@ -366,6 +371,7 @@ Rather not:
 
 if foo == 'blah': do_blah_thing()
 do_one(); do_two(); do_three()
+
 ```
 - While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
 
