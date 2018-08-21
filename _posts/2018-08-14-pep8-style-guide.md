@@ -332,7 +332,7 @@ def complex(real, imag = 0.0):
     
 ```
 
-- Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
+* Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
 ```yml
 Yes:
 
@@ -345,7 +345,7 @@ def munge()->PosInt: ...
 
 ```
 
-- When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
+* When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
 ```yml
 Yes:
 
@@ -373,7 +373,7 @@ if foo == 'blah': do_blah_thing()
 do_one(); do_two(); do_three()
 
 ```
-- While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
+* While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
 
 Rather not:
 ```yml
