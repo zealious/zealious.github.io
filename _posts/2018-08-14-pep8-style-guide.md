@@ -124,7 +124,7 @@ income = (gross_wages
 
 ## Imports
 
-###import는 보통 한줄에 하나씩 쓰입니다.  
+- import는 보통 한줄에 하나씩 쓰입니다.  
 ```yml
 import os
 import sys
