@@ -290,6 +290,102 @@ long_variable = 3
 
 ## 기타 권장사항
 
+- Avoid trailing whitespace anywhere. Because it's usually invisible, it can be confusing: e.g. a backslash followed by a space and a newline does not count as a line continuation marker. Some editors don't preserve it and many projects (like CPython itself) have pre-commit hooks that reject it.
+- 어디에서나 공백을 피하십시오. 일반적으로 보이지 않으므로 혼란 스러울 수 있습니다. 공백과 개행이 뒤 따르는 백 슬래시는 줄 계속 표시로 간주되지 않습니다. 일부 편집자는 그것을 보존하지 않고 CPython 자체와 같은 많은 프로젝트는 그것을 거부하는 사전 커밋 (pre-commit) 훅을 가지고있다.
+
+- Always surround these binary operators with a single space on either side: assignment (=), augmented assignment (+=, -= etc.), comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not), Booleans (and, or, not).
+- 할당 (=), 증가 된 할당 (+ =, - = 등), 비교 (==, <,>,! =, <>, <=,> = 등) in, in not, is, is), 불린 (boolean) (and, or not).
+
+- If operators with different priorities are used, consider adding whitespace around the operators with the lowest priority(ies). Use your own judgment; however, never use more than one space, and always have the same amount of whitespace on both sides of a binary operator.
+- 우선 순위가 다른 연산자를 사용하는 경우 우선 순위가 가장 낮은 연산자 주위에 공백을 추가하는 것이 좋습니다. 너 자신의 판단을 사용하라. 그러나 둘 이상의 공간을 사용하지 말고 항상 이진 연산자의 양쪽에 같은 공백을 둡니다.
+
+```yml
+Yes:
+
+i = i + 1
+submitted += 1
+x = x*2 - 1
+hypot2 = x*x + y*y
+c = (a+b) * (a-b)
+No:
+
+i=i+1
+submitted +=1
+x = x * 2 - 1
+hypot2 = x * x + y * y
+c = (a + b) * (a - b)
+```
+
+- Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
+```yml
+Yes:
+
+def complex(real, imag=0.0):
+    return magic(r=real, i=imag)
+No:
+
+def complex(real, imag = 0.0):
+    return magic(r = real, i = imag)
+```
+
+- Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
+```yml
+Yes:
+
+def munge(input: AnyStr): ...
+def munge() -> AnyStr: ...
+No:
+
+def munge(input:AnyStr): ...
+def munge()->PosInt: ...
+```
+
+- When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
+```yml
+Yes:
+
+def munge(sep: AnyStr = None): ...
+def munge(input: AnyStr, sep: AnyStr = None, limit=1000): ...
+No:
+
+def munge(input: AnyStr=None): ...
+def munge(input: AnyStr, limit = 1000): ...
+Compound statements (multiple statements on the same line) are generally discouraged.
+```
+```yml
+Yes:
+
+if foo == 'blah':
+    do_blah_thing()
+do_one()
+do_two()
+do_three()
+Rather not:
+
+if foo == 'blah': do_blah_thing()
+do_one(); do_two(); do_three()
+```
+- While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
+
+Rather not:
+```yml
+if foo == 'blah': do_blah_thing()
+for x in lst: total += x
+while t < 10: t = delay()
+```
+Definitely not:
+```yml
+if foo == 'blah': do_blah_thing()
+else: do_non_blah_thing()
+
+try: something()
+finally: cleanup()
+
+do_one(); do_two(); do_three(long, argument,
+                             list, like, this)
+
+if foo == 'blah': one(); two(); three()
+```
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
