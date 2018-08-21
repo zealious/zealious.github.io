@@ -38,7 +38,6 @@ howoo = howoo_function(
 ```
 
 잘못된 예시)
-
 ```yml
 # Arguments on first line forbidden when not using vertical alignment.(세로정렬을 하지 않을떄는 첫번째라인의 인자는 금지된다)
 foo = long_function_name(var_one, var_two,
@@ -55,7 +54,6 @@ def long_function_name(
 다음 줄이 4칸의 공백을 들여쓴다면 아래 코드와 시작적인 충돌이 생길 수 있습니다.  
 PEP는 명시적으로 어떻게 하라는 입장을 취하지 않았습니다.  
 3가지 정도의 예시가 있습니다.
-
 ```yml
 # No extra indentation.
 if (this_is_one_thing and
@@ -76,7 +74,6 @@ if (this_is_one_thing
 ```
 
 - 여러줄 구조체를 닫는 괄호/중괄호/대괄호는 다음과같이 할 수 잇습니다.
-
 ```yml
 1) 첫번째 공백이 아닌 문자아래에 정렬될 수 있다.
 my_list = [
