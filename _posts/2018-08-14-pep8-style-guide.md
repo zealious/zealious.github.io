@@ -127,12 +127,12 @@ income = (gross_wages
 
 ## Imports
 
-- import는 보통 한줄에 하나씩 쓰입니다.
+- import는 보통 한줄에 하나씩 쓰입니다.  
 ```yml
 import os
 import sys
 
-#from이 있을경우는 괜찮습니다.
+# from이 있을경우는 괜찮습니다.
 
 from subprocess import Popen, PIPE
 ```
