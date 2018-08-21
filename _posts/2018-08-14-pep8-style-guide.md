@@ -125,7 +125,8 @@ income = (gross_wages
 ## Imports
 
 - import는 보통 한줄에 하나씩 쓰입니다.   
- ```yml
+- 여러줄 구조체를 닫는 괄호/중괄호/대괄호는 다음과같이 할 수 잇습니다.  
+```yml
 import os
 import sys
 
