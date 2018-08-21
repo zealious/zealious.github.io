@@ -334,6 +334,7 @@ def complex(real, imag = 0.0):
 ```
 
 * Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
+
 ```yml
 Yes:
 
@@ -343,7 +344,6 @@ No:
 
 def munge(input:AnyStr): ...
 def munge()->PosInt: ...
-
 ```
 
 * When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
