@@ -125,14 +125,13 @@ income = (gross_wages
 ## Imports
 
 - import는 보통 한줄에 하나씩 쓰입니다.
-```yml
+ ```yml
 import os
 import sys
 
 # from이 있을경우는 괜찮습니다.
 
 from subprocess import Popen, PIPE
-
 ```
 
 - import는 파일의 맨위에 작성되지만 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
