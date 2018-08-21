@@ -1,5 +1,5 @@
 ---
-title: "PEP8 Style Guide"
+title: "PEP8 Style Guide 1편"
 tag : Python
 ---
 
@@ -7,7 +7,7 @@ tag : Python
 ## PEP8 Style Guide
 
 파이썬의 [코딩컨벤션][cv]이 PEP8 - Style Guide다.  
-이 내용은 파이썬 [공식문서][pep8] 내용을 번역한 내용입니다.  
+이 내용은 파이썬 [공식문서][pep8] 내용을 번역 및 의역한 내용입니다.  
 틀린부분이 있으면 언제든 지적 부탁드립니다.
 
 ## Indentation
@@ -51,7 +51,7 @@ def long_function_name(
     print(var_one)
 ```
 
-### if문의 조건문이 길 경우
+- if문의 조건문이 길 경우
 다음 줄이 4칸의 공백을 들여쓴다면 아래 코드와 시작적인 충돌이 생길 수 있습니다.  
 PEP는 명시적으로 어떻게 하라는 입장을 취하지 않았습니다.  
 3가지 정도의 예시가 있습니다.
@@ -75,7 +75,7 @@ if (this_is_one_thing
     do_something()
 ```
 
-### 여러줄 구조체를 닫는 괄호/중괄호/대괄호는 다음과같이 할 수 잇습니다.
+- 여러줄 구조체를 닫는 괄호/중괄호/대괄호는 다음과같이 할 수 잇습니다.
 
 ```yml
 1) 첫번째 공백이 아닌 문자아래에 정렬될 수 있다.
@@ -127,7 +127,7 @@ income = (gross_wages
 
 ## Imports
 
-### import는 보통 한줄에 하나씩 쓰입니다.
+- import는 보통 한줄에 하나씩 쓰입니다.
 
 ```yml
 import os
@@ -136,7 +136,7 @@ import sys
 #from이 있을경우는 괜찮습니다.
 from subprocess import Popen, PIPE
 ```
-### import는 파일의 맨위에 작성되지만 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
+- import는 파일의 맨위에 작성되지만 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
 import 는 다음과같이 그룹화 되어야합니다.  
 
 > 1) Standard library imports.  
@@ -145,7 +145,7 @@ import 는 다음과같이 그룹화 되어야합니다.
 
 각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
 
-### 절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
+- 절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
 
 ```yml
 import mypkg.sibling
@@ -217,6 +217,78 @@ import sys
 
 삼중 따옴표로 묶인 문자열의 경우, 큰 따옴표 문자를 사용하여 [PEP 257][pep257]의 문서 문자열 규칙과 일관되게하십시오.
 
+
+## Whitespace in Expressions and Statements(표현식과 구문안의 공백)
+
+###Pet Peeves(공치덩어리)
+
+다음과 같은 상황에서 공백이 생기는것을 피한다.
+
+- 괄호(대,중,소) 안의 양쪽 끝
+```yml
+Yes: spam(ham[1], {eggs: 2})
+No:  spam( ham[ 1 ], { eggs: 2 } )
+```
+
+- 쉼표와 닫히는 괄호 사이
+```yml
+Yes: foo = (0,)
+No:  bar = (0, )
+```
+
+- 콤마,세미콜론,콜론 이전의 공백
+```yml
+Yes: if x == 4: print x, y; x, y = y, x
+No:  if x == 4 : print x , y ; x , y = y , x
+```
+
+- However, in a slice the colon acts like a binary operator, and should have equal amounts on either side (treating it as the operator with the lowest priority). In an extended slice, both colons must have the same amount of spacing applied. Exception: when a slice parameter is omitted, the space is omitted.
+- 슬라이스의 콜론은 이항연산자와 같이 양쪽에 같은 양을 가져야합니다(가장낮은 우선순위의 연산자로 처리)??
+확장된 슬라이스에서 두 콜론은 같은 양의 간격을 적용해야합니다. 다만 피연산자가 누락되었을경우에는 공백을 주지 않습니다.
+
+```yml
+Yes:
+
+ham[1:9], ham[1:9:3], ham[:9:3], ham[1::3], ham[1:9:]
+ham[lower:upper], ham[lower:upper:], ham[lower::step]
+ham[lower+offset : upper+offset]
+ham[: upper_fn(x) : step_fn(x)], ham[:: step_fn(x)]
+ham[lower + offset : upper + offset]
+
+No:
+
+ham[lower + offset:upper + offset]
+ham[1: 9], ham[1 :9], ham[1:9 :3]
+ham[lower : : upper]
+ham[ : upper]
+Immediately before the open parenthesis that starts the argument list of a function call:
+```
+
+```yml
+Yes: spam(1)
+No:  spam (1)
+```
+
+- 인덱싱이나 슬라이싱하는 괄호 바로 앞
+```yml
+Yes: dct['key'] = lst[index]
+No:  dct ['key'] = lst [index]
+```
+
+- 대입연산자의 앞뒤는 공백을 주자
+
+```yml
+Yes:
+
+x = 1
+y = 2
+long_variable = 3
+No:
+
+x             = 1
+y             = 2
+long_variable = 3
+```
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
