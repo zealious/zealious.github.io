@@ -113,7 +113,6 @@ my_list = [
 ## 줄바꿈은 연산자 전에 해야하나 후에해야하나?
 
 - 앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.
-
 ```yml
 easy to match operators with operands
 income = (gross_wages
@@ -125,8 +124,7 @@ income = (gross_wages
 
 ## Imports
 
-- import는 보통 한줄에 하나씩 쓰입니다.  
-
+- import는 보통 한줄에 하나씩 쓰입니다.
 ```yml
 import os
 import sys
