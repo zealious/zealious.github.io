@@ -346,6 +346,7 @@ def munge()->PosInt: ...
 ```
 
 * When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
+
 ```yml
 Yes:
 
@@ -376,6 +377,7 @@ do_one(); do_two(); do_three()
 * While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
 
 Rather not:
+
 ```yml
 if foo == 'blah': do_blah_thing()
 for x in lst: total += x
