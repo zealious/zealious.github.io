@@ -136,7 +136,7 @@ import sys
 #from이 있을경우는 괜찮습니다.
 from subprocess import Popen, PIPE
 ```
-### import는 파일의 맨위 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
+### import는 파일의 맨위에 작성되지만 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
 import 는 다음과같이 그룹화 되어야합니다.  
 
 > 1) Standard library imports.  
@@ -153,19 +153,20 @@ from mypkg import sibling
 from mypkg.sibling import example
 ```
 
-그러나 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports는 절대경로 imports에 대안으로 받아들여질 수 있습니다.
+그러나 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports를 절대경로 imports에 대신사용해도 됩니다.
+
 
 ```yml
 from . import sibling
 from .sibling import example
 ```
 
-Standard library code는 복잡한 패키지 레이아웃을 피하고 항상 절대 import를 사용해야합니다.
+Standard library code는 복잡한 패키지 레이아웃을 피하고 항상 절대경로 import를 사용해야합니다.
 
-묵시적인 상대적인 import는 결코 사용되어서는 안되며 Python 3에서는 제거되었습니다.
+묵시적인?? 상대적인?? import는 결코 사용되어서는 안되며 Python 3에서는 제거되었습니다.
 
 
-## 클래스가 정의된 모듈에서클래스를 import할 경우 보통 아래 처럼 사용합니다.
+## 클래스가 정의된 모듈에서 클래스를 import할 경우 보통 아래 처럼 사용합니다.
 
 ```yml
 from myclass import MyClass
@@ -211,7 +212,7 @@ import sys
 ## String Quotes
 
 파이썬에서는 작은 따옴표로 묶인 문자열과 큰 따옴표로 묶은 문자열이 동일합니다.    
-그러나 문자열에 작은 따옴표 나 큰 따옴표가 포함되어 있으면 다른 문자열을 사용하여 문자열의 백 슬래시를 방지하십시오.  
+그러나 문자열에 작은 따옴표 나 큰 따옴표가 포함되어 있으면 둘중 하나를 사용하여 문자열의 백 슬래시를 방지하십시오.  
 가독성이 향상됩니다.
 
 삼중 따옴표로 묶인 문자열의 경우, 큰 따옴표 문자를 사용하여 [PEP 257][pep257]의 문서 문자열 규칙과 일관되게하십시오.
