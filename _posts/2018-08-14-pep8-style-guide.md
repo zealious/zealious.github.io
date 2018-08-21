@@ -131,9 +131,9 @@ income = (gross_wages
 ```yml
 import os
 import sys
-```
+
 #from이 있을경우는 괜찮습니다.
-```yml
+
 from subprocess import Popen, PIPE
 ```
 
@@ -152,8 +152,7 @@ import mypkg.sibling
 from mypkg import sibling
 from mypkg.sibling import example
 ```
-
-그러나 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports를 절대경로 imports에 대신사용해도 됩니다.
+ * 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports를 절대경로 imports에 대신사용해도 됩니다.
 ```yml
 from . import sibling
 from .sibling import example
