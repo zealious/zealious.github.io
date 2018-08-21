@@ -256,19 +256,19 @@ ham[lower : : upper]
 ham[ : upper]
 ```
 
-- 함수 호출 인수 앞에 공백
+### 함수 호출 인수 앞에 공백
 ```yml
 Yes: spam(1)
 No:  spam (1)
 ```
 
-- 인덱싱이나 슬라이싱하는 괄호 바로 앞
+### 인덱싱이나 슬라이싱하는 괄호 바로 앞
 ```yml
 Yes: dct['key'] = lst[index]
 No:  dct ['key'] = lst [index]
 ```
 
-- 대입연산자의 앞뒤는 공백을 주자
+### 대입연산자의 앞뒤는 공백을 주자
 ```yml
 Yes:
 
@@ -312,8 +312,7 @@ c = (a + b) * (a - b)
 
 ```
 
-- Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
-
+### Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
 ```yml
 Yes:
 
@@ -326,8 +325,7 @@ def complex(real, imag = 0.0):
     
 ```
 
-* Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
-
+### Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
 ```yml
 Yes:
 
@@ -339,8 +337,7 @@ def munge(input:AnyStr): ...
 def munge()->PosInt: ...
 ```
 
-* When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
-
+### When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
 ```yml
 Yes:
 
@@ -368,7 +365,7 @@ if foo == 'blah': do_blah_thing()
 do_one(); do_two(); do_three()
 
 ```
-* While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
+### While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
 
 Rather not:
 
