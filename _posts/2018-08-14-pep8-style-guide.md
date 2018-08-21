@@ -320,6 +320,7 @@ c = (a + b) * (a - b)
 ```
 
 - Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
+
 ```yml
 Yes:
 
