@@ -50,10 +50,11 @@ def long_function_name(
     print(var_one)
 ```
 
-- if문의 조건문이 길 경우  
+- if문의 조건문이 길 경우
+
 아래와 보기와 같이 실행코드와 같은 들여쓰기로 되어있다면 시각적으로 헷갈려 할 수 도 있습니다.
 PEP는 명시적으로 어떻게 하라는 입장을 취하지 않았습니다.  
-3가지 정도의 예시가 있습니다.  
+3가지 정도의 예시가 있습니다.
 ```yml
 # No extra indentation.
 if (this_is_one_thing and
@@ -111,7 +112,7 @@ my_list = [
 
 ## 줄바꿈은 연산자 전에 해야하나 후에해야하나?
 
-앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.
+- 앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.
 
 ```yml
 easy to match operators with operands
