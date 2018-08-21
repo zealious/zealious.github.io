@@ -274,6 +274,7 @@ Yes: dct['key'] = lst[index]
 No:  dct ['key'] = lst [index]
 ```
 
+
 - 대입연산자의 앞뒤는 공백을 주자
 ```yml
 Yes:
