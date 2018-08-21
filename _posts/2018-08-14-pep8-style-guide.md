@@ -112,7 +112,7 @@ my_list = [
 
 ## 줄바꿈은 연산자 전에 해야하나 후에해야하나?
 
-- 앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.
+- 앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.  
 ```yml
 easy to match operators with operands
 income = (gross_wages
@@ -138,9 +138,9 @@ from subprocess import Popen, PIPE
 - import는 파일의 맨위에 작성되지만 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
 import 는 다음과같이 그룹화 되어야합니다.  
 
-> 1) Standard library imports.  
-> 2) Related third party imports.  
-> 3) Local application/library specific imports.  
+> 1) Standard library imports.
+> 2) Related third party imports.
+> 3) Local application/library specific imports.
 
 각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
 
