@@ -124,7 +124,7 @@ income = (gross_wages
 
 ## Imports
 
-- import는 보통 한줄에 하나씩 쓰입니다.
+- import는 보통 한줄에 하나씩 쓰입니다.   
  ```yml
 import os
 import sys
@@ -143,13 +143,13 @@ import 는 다음과같이 그룹화 되어야합니다.
 
 각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
 
-- 절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)
+- 절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다.(더 나은 오류메세지를 볼 수 있습니다)   
 ```yml
 import mypkg.sibling
 from mypkg import sibling
 from mypkg.sibling import example
 ```
- * 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports를 절대경로 imports에 대신사용해도 됩니다.
+ * 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports를 절대경로 imports에 대신사용해도 됩니다.   
 ```yml
 from . import sibling
 from .sibling import example
