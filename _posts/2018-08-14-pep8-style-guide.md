@@ -245,7 +245,6 @@ No:  if x == 4 : print x , y ; x , y = y , x
 - However, in a slice the colon acts like a binary operator, and should have equal amounts on either side (treating it as the operator with the lowest priority). In an extended slice, both colons must have the same amount of spacing applied. Exception: when a slice parameter is omitted, the space is omitted.
 - 슬라이스의 콜론은 이항연산자와 같이 양쪽에 같은 양을 가져야합니다(가장낮은 우선순위의 연산자로 처리)??
 확장된 슬라이스에서 두 콜론은 같은 양의 간격을 적용해야합니다. 다만 피연산자가 누락되었을경우에는 공백을 주지 않습니다.
-
 ```yml
 Yes:
 
@@ -263,7 +262,6 @@ ham[lower : : upper]
 ham[ : upper]
 Immediately before the open parenthesis that starts the argument list of a function call:
 ```
-
 ```yml
 Yes: spam(1)
 No:  spam (1)
@@ -276,7 +274,6 @@ No:  dct ['key'] = lst [index]
 ```
 
 - 대입연산자의 앞뒤는 공백을 주자
-
 ```yml
 Yes:
 
@@ -289,6 +286,10 @@ x             = 1
 y             = 2
 long_variable = 3
 ```
+
+
+## 기타 권장사항
+
 
 [pep8]: https://www.python.org/dev/peps/pep-0008/
 [cv]: https://zealious.github.io/about-python-coding-convention/
