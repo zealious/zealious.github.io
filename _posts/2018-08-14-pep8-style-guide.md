@@ -214,7 +214,7 @@ import sys
 
 ## Whitespace in Expressions and Statements(표현식과 구문안의 공백)
 
-###Pet Peeves(공치덩어리)
+### Pet Peeves(공치덩어리)
 
 다음과 같은 상황에서 공백이 생기는것을 피한다.
 
