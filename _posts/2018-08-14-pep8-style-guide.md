@@ -135,7 +135,7 @@ from subprocess import Popen, PIPE
 ```
 
 ### import는 파일의 맨위에 작성되지만 주석 및 docstirings(""" """) 다음 줄, 전역변수와 상수 위에 놓이게 됩니다.
-###import 는 다음과같이 그룹화 되어야합니다.
+### import 는 다음과같이 그룹화 되어야합니다.
 
 > 1) Standard library imports.  
 > 2) Related third party imports.  
@@ -236,9 +236,8 @@ Yes: if x == 4: print x, y; x, y = y, x
 No:  if x == 4 : print x , y ; x , y = y , x
 ```
 
-```
-However, in a slice the colon acts like a binary operator, and should have equal amounts on either side (treating it as the operator with the lowest priority). In an extended slice, both colons must have the same amount of spacing applied. Exception: when a slice parameter is omitted, the space is omitted.슬라이스의 콜론은 이항연산자와 같이 양쪽에 같은 양을 가져야합니다(가장낮은 우선순위의 연산자로 처리) 확장된 슬라이스에서 두 콜론은 같은 양의 간격을 적용해야합니다. 다만 피연산자가 누락되었을경우에는 공백을 주지 않습니다  
-```
+### 슬라이스의 콜론은 이항연산자와 같이 양쪽에 같은 양을 가져야합니다(가장낮은 우선순위의 연산자로 처리) 확장된 슬라이스에서 두 콜론은 같은 양의 간격을 적용해야합니다. 다만 피연산자가 누락되었을경우에는 공백을 주지 않습니다  
+
 ```yml
 Yes:
 
@@ -286,12 +285,10 @@ long_variable = 3
 ## 기타 권장사항
 
 - Avoid trailing whitespace anywhere. Because it's usually invisible, it can be confusing: e.g. a backslash followed by a space and a newline does not count as a line continuation marker. Some editors don't preserve it and many projects (like CPython itself) have pre-commit hooks that reject it.
-- 어디에서나 공백을 피하십시오. 일반적으로 보이지 않으므로 혼란 스러울 수 있습니다. 공백과 개행이 뒤 따르는 백 슬래시는 줄 계속 표시로 간주되지 않습니다. 일부 편집자는 그것을 보존하지 않고 CPython 자체와 같은 많은 프로젝트는 그것을 거부하는 사전 커밋 (pre-commit) 훅을 가지고있다.
+- 어디에서나 공백을 피하십시오. 일반적으로 보이지 않으므로 혼란 스러울 수 있습니다. 공백과 개행이 뒤 따르는 백 슬래시는 개행 표시로 간주되지 않습니다. 일부 편집자는 그것을 보존하지 않고 CPython 자체와 같은 많은 프로젝트는 그것을 거부하는 사전 커밋 (pre-commit) 훅을 가지고있다.
 
-- Always surround these binary operators with a single space on either side: assignment (=), augmented assignment (+=, -= etc.), comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not), Booleans (and, or, not).
-- 할당 (=), 증가 된 할당 (+ =, - = 등), 비교 (==, <,>,! =, <>, <=,> = 등) in, in not, is, is), 불린 (boolean) (and, or not).
+- 항상 이진연산자 양쪽에 하나의 공백을 둡니다.: 할당 assignment (=), augmented assignment (+=, -= etc.), 비교 comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not), Booleans (and, or, not).
 
-- If operators with different priorities are used, consider adding whitespace around the operators with the lowest priority(ies). Use your own judgment; however, never use more than one space, and always have the same amount of whitespace on both sides of a binary operator.
 - 우선 순위가 다른 연산자를 사용하는 경우 우선 순위가 가장 낮은 연산자 주위에 공백을 추가하는 것이 좋습니다. 너 자신의 판단을 사용하라. 그러나 둘 이상의 공간을 사용하지 말고 항상 이진 연산자의 양쪽에 같은 공백을 둡니다.
 
 ```yml
@@ -309,10 +306,9 @@ submitted +=1
 x = x * 2 - 1
 hypot2 = x * x + y * y
 c = (a + b) * (a - b)
-
 ```
 
-### Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
+### 키워드 인자 와 매개변수 값을 나타낼 때 = 기호주위에 공백을 사용하지 마세요.
 ```yml
 Yes:
 
@@ -325,8 +321,10 @@ def complex(real, imag = 0.0):
     
 ```
 
-### Function annotations should use the normal rules for colons and always have spaces around the -> arrow if present. (See Function Annotations below for more about function annotations.)
+### 함수 주석은 콜론에 대한 일반 규칙을 사용해야하며 항상 -> 화살표 주위에 공백이 있어야합니다. 함수 주석에 대한 자세한 내용은 아래 함수 주석을 참조하십시오.
 ```yml
+
+함수 주석은 -> 보통 반환값에 대해 작성합니다.
 Yes:
 
 def munge(input: AnyStr): ...
@@ -337,7 +335,7 @@ def munge(input:AnyStr): ...
 def munge()->PosInt: ...
 ```
 
-### When combining an argument annotation with a default value, use spaces around the = sign (but only for those arguments that have both an annotation and a default).
+### 인자의 주석을 기본값과 결합 할 때 = 기호 주위의 공백을 사용하십시오 (단, 주석과 기본값을 모두 갖는 인수에만 해당).
 ```yml
 Yes:
 
@@ -347,10 +345,9 @@ No:
 
 def munge(input: AnyStr=None): ...
 def munge(input: AnyStr, limit = 1000): ...
-Compound statements (multiple statements on the same line) are generally discouraged.
-
 ```
 
+### 복합 명령문 (같은 행에있는 여러 명령문)은 일반적으로 사용하지 않는 것이 좋습니다.
 ```yml
 Yes:
 
@@ -359,6 +356,7 @@ if foo == 'blah':
 do_one()
 do_two()
 do_three()
+
 Rather not:
 
 if foo == 'blah': do_blah_thing()
@@ -367,15 +365,16 @@ do_one(); do_two(); do_three()
 ```
 ### While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
 
+```yml
 Rather not:
 
-```yml
 if foo == 'blah': do_blah_thing()
 for x in lst: total += x
 while t < 10: t = delay()
-```
+
+
 Definitely not:
-```yml
+
 if foo == 'blah': do_blah_thing()
 else: do_non_blah_thing()
 
