@@ -363,7 +363,7 @@ if foo == 'blah': do_blah_thing()
 do_one(); do_two(); do_three()
 
 ```
-### While sometimes it's okay to put an if/for/while with a small body on the same line, never do this for multi-clause statements. Also avoid folding such long lines!
+### 작은 본문이있는 if / for / while을 같은 줄에 두는 것이 좋을 수도 있지만, 다중 절 문에 대해서는 절대로 사용하지 마십시오. 또한 긴 줄을 접는 것을 피하십시오!
 
 ```yml
 Rather not:
