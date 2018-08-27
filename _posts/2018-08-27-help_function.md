@@ -14,7 +14,7 @@ tag : Python
 
 * 무조건 짧은 코드를 만들기 보다는 가독성을 선택하는 편이 낫다.
 
-```yml
+```python
 you_dict = { 'A' : 'red', 'B' : '1', '' }
 
 print(you_dict.get('A'))            # 있는그대로 출력
