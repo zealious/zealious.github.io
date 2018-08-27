@@ -20,7 +20,7 @@ tag : Python
 
 
 올바른 예)
-```yml
+```python
 # Aligned with opening delimiter.(여는 괄호를 기준으로 정렬됩니다)
 howoo = long_function_name(var_one, var_two,
                            var_three, var_four)
@@ -38,7 +38,7 @@ howoo = howoo_function(
 ```
 
 잘못된 예시)
-```yml
+```python
 # Arguments on first line forbidden when not using vertical alignment.(세로정렬을 하지 않을떄는 첫번째라인의 인자는 금지된다)
 foo = long_function_name(var_one, var_two,
     var_three, var_four)
@@ -55,7 +55,7 @@ def long_function_name(
 아래와 보기와 같이 실행코드와 같은 들여쓰기로 되어있다면 시각적으로 헷갈려 할 수 도 있습니다.
 PEP는 명시적으로 어떻게 하라는 입장을 취하지 않았습니다.  
 3가지 정도의 예시가 있습니다.
-```yml
+```python
 # No extra indentation.
 if (this_is_one_thing and
     that_is_another_thing):
@@ -75,7 +75,7 @@ if (this_is_one_thing
 ```
 
 - 여러줄 구조체를 닫는 괄호/중괄호/대괄호는 다음과같이 할 수 잇습니다.  
-```yml
+```python
 1) 첫번째 공백이 아닌 문자아래에 정렬될 수 있다.
 my_list = [
     1, 2, 3,
@@ -113,7 +113,7 @@ my_list = [
 ## 줄바꿈은 연산자 전에 해야하나 후에해야하나?
 
 - 앞뒤 둘다 허용하나 가독성을 위해 연사자 앞에서 줄바꿈을 한다.  
-```yml
+```python
 easy to match operators with operands
 income = (gross_wages
           + taxable_interest
@@ -125,7 +125,7 @@ income = (gross_wages
 ## Imports
 
 ### import는 보통 한줄에 하나씩 쓰입니다
-```yml
+```python
 import os
 import sys
 
@@ -144,13 +144,13 @@ from subprocess import Popen, PIPE
 각가의 imports 그룹의 사이에 빈공백으로 구분져야합니다.  
 
 - 절대 경로를 추천합니다. 일반적으로 더 읽기 쉽고 더 나은 동작을 하는 경향이있습니다(더 나은 오류메세지를 볼 수 있습니다) 
-```yml
+```python
 import mypkg.sibling
 from mypkg import sibling
 from mypkg.sibling import example
 ```
  * 길어지게 될 경우 복잡한 패키지를 다룰땐 상대경로 imports를 절대경로 imports에 대신사용해도 됩니다.   
-```yml
+```python
 from . import sibling
 from .sibling import example
 ```
@@ -162,14 +162,14 @@ Standard library code는 복잡한 패키지 레이아웃을 피하고 항상 �
 
 ## 클래스가 정의된 모듈에서 클래스를 import할 경우 보통 아래 처럼 사용합니다.
 
-```yml
+```python
 from myclass import MyClass
 from foo.bar.yourclass import YourClass
 ```
 
 만약 이 경우 지역변수가 충돌된다면 아래와 같이 사용합니다.
 
-```yml
+```python
 import myclass
 import foo.bar.yourclass
 ```
@@ -185,7 +185,7 @@ __all__, __author__, __version__ 등과 같은 모듈 수준의 "dunders"(즉 �
 __future__ imports를 제외한 모든 import 문 앞에 있어야합니다.   
 파이썬은 future-imports는 반드시 모듈에 docstrings을 제외한 다른 코드보다 앞에 나타나야한다고 합니다.
 
-```yml
+```python
 
 """This is the example module.
 
@@ -219,26 +219,26 @@ import sys
 다음과 같은 상황에서 공백이 생기는것을 피한다.
 
 - 괄호(대,중,소) 안의 양쪽 끝
-```yml
+```python
 Yes: spam(ham[1], {eggs: 2})
 No:  spam( ham[ 1 ], { eggs: 2 } )
 ```
 
 - 쉼표와 닫히는 괄호 사이
-```yml
+```python
 Yes: foo = (0,)
 No:  bar = (0, )
 ```
 
 - 콤마,세미콜론,콜론 이전의 공백
-```yml
+```python
 Yes: if x == 4: print x, y; x, y = y, x
 No:  if x == 4 : print x , y ; x , y = y , x
 ```
 
 ### 슬라이스의 콜론은 이항연산자와 같이 양쪽에 같은 양을 가져야합니다(가장낮은 우선순위의 연산자로 처리) 확장된 슬라이스에서 두 콜론은 같은 양의 간격을 적용해야합니다. 다만 피연산자가 누락되었을경우에는 공백을 주지 않습니다  
 
-```yml
+```python
 Yes:
 
 ham[1:9], ham[1:9:3], ham[:9:3], ham[1::3], ham[1:9:]
@@ -256,19 +256,19 @@ ham[ : upper]
 ```
 
 ### 함수 호출 인수 앞에 공백
-```yml
+```python
 Yes: spam(1)
 No:  spam (1)
 ```
 
 ### 인덱싱이나 슬라이싱하는 괄호 바로 앞
-```yml
+```python
 Yes: dct['key'] = lst[index]
 No:  dct ['key'] = lst [index]
 ```
 
 ### 대입연산자의 앞뒤는 공백을 주자
-```yml
+```python
 Yes:
 
 x = 1
@@ -291,7 +291,7 @@ long_variable = 3
 
 - 우선 순위가 다른 연산자를 사용하는 경우 우선 순위가 가장 낮은 연산자 주위에 공백을 추가하는 것이 좋습니다. 너 자신의 판단을 사용하라. 그러나 둘 이상의 공간을 사용하지 말고 항상 이진 연산자의 양쪽에 같은 공백을 둡니다.
 
-```yml
+```python
 Yes:
 
 i = i + 1
@@ -309,7 +309,7 @@ c = (a + b) * (a - b)
 ```
 
 ### 키워드 인자 와 매개변수 값을 나타낼 때 = 기호주위에 공백을 사용하지 마세요.
-```yml
+```python
 Yes:
 
 def complex(real, imag=0.0):
@@ -322,7 +322,7 @@ def complex(real, imag = 0.0):
 ```
 
 ### 함수 주석은 콜론에 대한 일반 규칙을 사용해야하며 항상 -> 화살표 주위에 공백이 있어야합니다. 함수 주석에 대한 자세한 내용은 아래 함수 주석을 참조하십시오.
-```yml
+```python
 
 함수 주석은 -> 보통 반환값에 대해 작성합니다.
 Yes:
@@ -336,7 +336,7 @@ def munge()->PosInt: ...
 ```
 
 ### 인자의 주석을 기본값과 결합 할 때 = 기호 주위의 공백을 사용하십시오 (단, 주석과 기본값을 모두 갖는 인수에만 해당).
-```yml
+```python
 Yes:
 
 def munge(sep: AnyStr = None): ...
@@ -348,7 +348,7 @@ def munge(input: AnyStr, limit = 1000): ...
 ```
 
 ### 복합 명령문 (같은 행에있는 여러 명령문)은 일반적으로 사용하지 않는 것이 좋습니다.
-```yml
+```python
 Yes:
 
 if foo == 'blah':
@@ -365,7 +365,7 @@ do_one(); do_two(); do_three()
 ```
 ### 작은 본문이있는 if / for / while을 같은 줄에 두는 것이 좋을 수도 있지만, 다중 절 문에 대해서는 절대로 사용하지 마십시오. 또한 긴 줄을 접는 것을 피하십시오!
 
-```yml
+```python
 Rather not:
 
 if foo == 'blah': do_blah_thing()
