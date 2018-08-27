@@ -13,7 +13,7 @@ tag : Python
 ## 복잡한 표현식 대신 헬퍼 함수를 작성하자
 
 * 무조건 짧은 코드를 만들기 보다는 가독성을 선택하는 편이 낫다.
-```python
+```yml
 you_dict = { 'A' : 'red', 'B' : '1', '' }
 
 print(you_dict.get('A'))            # 있는그대로 출력
