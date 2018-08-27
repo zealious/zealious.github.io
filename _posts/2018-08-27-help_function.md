@@ -1,5 +1,5 @@
 ---
-title: "헬퍼 함수"
+title: "복잡한 표현식 대신 헬퍼 함수"
 tag : Python
 ---
 
