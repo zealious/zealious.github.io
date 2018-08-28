@@ -35,3 +35,31 @@ filter_value = filter(lambda x: x %2 == 0 , list)
 
 ## 리스트 컴프리헨션(list comprehension: 리스트 함축 표현식)
 
+* map과 filter를 사용할 수 있지만 리스트 컴프리헨션을 사용하면 보기가 훨씬 좋다.
+
+```python
+# list comprehension
+compre = [x**2 for x in list if x % 2 == 0]
+
+# map & filter
+map_filter = map(lambda x: x**2, filter(lambda x: x%2 == 0, list))
+
+assert compre == list(map_filter) # assert 해당 조건이 맞지않을경우 AssertionError 발생
+```
+
+```python
+chile_ranks = {'ghost': 1, 'habanero': 2, 'cayenne': 3}
+
+# Dictionary
+rank_dict = {rank, name for name, rank in chile_ranks.items()}
+
+# Set 
+chile_len_set = {len(name) for name in rank_dict.value()}
+
+print(rank_dict)
+print(chile_len_set)
+
+>>>
+{1: 'ghost', 2: 'habanero', 3: 'cayenne'}
+{8, 5, 7}
+```
