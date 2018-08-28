@@ -63,3 +63,37 @@ print(chile_len_set)
 {1: 'ghost', 2: 'habanero', 3: 'cayenne'}
 {8, 5, 7}
 ```
+
+
+## 리스트 컴프리헨션에서 표현식을 두 개 넘게 쓰지 말자
+
+* 2개의 표현식은 이해하기 괜찮지만 3개 이상부터는 읽기가 쉽지않다.
+* 몇 줄을 절약한 장점이 나중에 겪을 어려움보다 크지는 않다.
+
+```python
+# 2개의 표현식
+squared = [[x**2 for x in row] for row in matrix]
+
+# 3개의 표현식
+flat  = [x for sublist1 in my_lists
+         for sublist2 in  sublist1
+         for x in sublist2]
+
+# 3개의 표현식은 아래와 같이 표현하는게 보기 쉽다.
+flat = []
+for sublist1 in my_lists:
+    for sublist2 in sublist1:
+         flat.append(sublist2)
+```
+
+* 다중 if 조건을 지원하는데 여러 조건이 있으면 암시적인 and 표현식이 된다.
+
+```python
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+b = [x for x in a if x > 4 if x % 2 == 0]
+c = [x for x in a if x > 4 and x % 2 == 0]
+```
+
+## 핵심정리
+* 리스트 컴프리헨션은 다중루프와 루프레벨별 다중 조건을 지원한다.
+* 표현식이 두개가 넘에 들어 있는 리스트 컴프리헨션은 이해하기 매우 어려우므로 피해야한다.
