@@ -5,7 +5,8 @@ tag : Python
 
 ## range란?
 
-* 입력받은 숫자에 해당되는 범위의 값을 반복(iterable) 가능한 객체로 만들어 리턴한다.  
+* 입력받은 숫자에 해당되는 범위의 값을 반복(iterable) 가능한 객체로 만들어 리턴한다.
+
 ```python
 # range([start],stop,[,step])
 
@@ -16,14 +17,13 @@ for i in range(10):
 ## enumerate란?
 * 리스트가 있는경우 인덱스와 리스트의 값을 전달하는 역할  
 * enumerate는 지연 제너레이터(lazy generaor)로 이터레이터를 감싼다.  
-* 지연 제너레이터는 인덱스와 값을 한쌍으로 가져와 넘겨준다.  
+* 지연 제너레이터는 인덱스와 값을 한쌍으로 가져와 넘겨준다.
+
 ```python
 for count, name in enumerate(list):
     print(count, name)
 ```
-
-## 
-
+## enumerate의 장점 인덱스와 값을 한번에 받을 수 있다.
 ```python
 # range를 활용할 경우
 for i in range(len(flavor_list)):
