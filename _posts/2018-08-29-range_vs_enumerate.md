@@ -1,6 +1,7 @@
-
-
-## range와 enumerate 어떤걸 사용해야할까?
+---
+title: "range와 enumerate 어떤걸 사용해야할까?"
+tag : Python
+---
 
 ## range란?
 
