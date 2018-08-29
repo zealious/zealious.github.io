@@ -23,7 +23,7 @@ for i in range(10):
 for count, name in enumerate(list):
     print(count, name)
 ```
-## enumerate의 장점 인덱스와 값을 한번에 받을 수 있다.
+### enumerate의 장점 인덱스와 값을 한번에 받을 수 있다.
 ```python
 # range를 활용할 경우
 for i in range(len(flavor_list)):
