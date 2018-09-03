@@ -1,5 +1,8 @@
 
-
+---
+title: "퍼스트클래스 함수란 무엇인가?"
+tag : Python
+---
 
 ## 퍼스트클래스 함수(First Class Function)란?
 
