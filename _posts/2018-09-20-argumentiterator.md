@@ -78,7 +78,7 @@ print(percentages)
 ```python
 def normalize(numbers):
     if iter(numbers) is iter(numbers):
-        raise TypeError('Must supply a container)
+        raise TypeError('Must supply a container')
     total = sum(numbers)
     result = []
     for value in numbers:
