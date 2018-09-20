@@ -3,6 +3,7 @@ title: "인수를 순회할 때는 방어적으로 하자"
 tag : Python
 ---
 
+어떤 percentage를 구하는 함수를 하나 만들었다.
 ```python
 def normalize(numbers):
     total = sum(numbers)
@@ -21,7 +22,7 @@ print(percentages)
 [11.538, 26.923, 61.538]
 ```
 
-만약 대용량 리스트를 받을 경우 메모리를 많이 사용하기 때문에 제너레이터를 사용해야한다.
+만약 대용량 리스트를 받을 경우 이전에 공부했던 내용처럼 메모리 문제로 제너레이터를 사용할 것이다.
 
 ```python
 def read_visits(data_path):
@@ -76,7 +77,7 @@ print(percentages)
 * 이터레이터를 넘기면 결과값이 제대로 안나오기 때문에 조건을 넣는다.
 
 ```python
-def normalize(numbers):
+def normalize_defensive(numbers):
     if iter(numbers) is iter(numbers):
         raise TypeError('Must supply a container')
     total = sum(numbers)
@@ -95,10 +96,13 @@ class ReadVisits(object):
             for line in f:
                 yield int(line)
                 
-visits = ReadVisits(path)
-percentages = normalize(visits)
+visits = [15, 35, 80]
+percentages = normalize_defensive(visits)
+print(percentages) # 오류 없음
 
-print(percentages)
+visits = ReadVisits(path)
+percentages = normalize_defensive(visits)
+print(percentages) # 오류 없음
 
 >>>
 [11.538, 26.923, 61.538]
