@@ -1,5 +1,5 @@
 ---
-title: "map과 filter대신 리스트 컴프리헨션을 사용하자"
+title: "map과 filter대신 리스트 컴프리헨션을 사용하자 + "
 tag : Python
 ---
 
