@@ -71,7 +71,7 @@ log('Favorite', 7, 33)    # 수정하지 않으면 이상하게 동작한다.
 >>>
 1: Favorite: 7, 33
 Favorite numbers: 7: 33 # 잘못됨
-
+```
 이런 문제를 해결하기 위해서는 keyword arguments를 사용하자.
 
 ## 키워드 인수로 선택적인 동작을 제공하자.
