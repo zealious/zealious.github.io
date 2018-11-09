@@ -86,3 +86,39 @@ log(2, sequence=1) # error발생 각 인수는 한번만 지정이가능(sequenc
 > 1) 코드를 처음 보는 사람이 함수 호출을 더 명확하게 이해할 수 있다는 점이다.  
 > 2) 함수를 정의할 때 기본값을 설정할 수 있다는 점이다.  
 > 3) 기존의 호출 코드와 호환성을 유지하면서도 함수의 파라미터를 확장할 수 있다.  
+
+
+## 키워드 전용인수로 명료성을 강조하자
+
+```python
+def safe_division_b(number, divisor, ignore_overflow=False, ignore_zero_division=False):
+ #...
+ 
+safe_division_b(1, 0, ignore_zero_division=True)
+safe_division_b(1, 0, True, False)
+```
+
+위와 같이 키워드로 호출 할 수 있지만 명확하게 의도를 드러내라고 강요할 방법이없다.  
+여전히 인수를 사용하는 이전 방식으로 호출할 수 있다.  
+
+파이썬3에서는 키워드 전용인수로 함수를 저의해서 의도를 명확히 드러내도록 요구할 수 있다.
+
+```python
+def safe_division_b(number, divisor, *, ignore_overflow=False, ignore_zero_division=False):
+ #...
+ 
+safe_division_b(1, 0, ignore_zero_division=True) # 문제없음
+safe_division_b(1, 0, True, False)               # 오류발생
+```
+이제 키워드 인수가 아닌 위치 인수를 사용하는 함수 호출은 동작하지 않는다.
+
+파이썬2에서는 아래와같이 사용하면된다.
+```python
+def print_args(*args, **kargs):
+    ignore_overflow = kwargs.pop('ignore_overflow',False)
+    ignore_zero_div = kwargs.pop('ignore_zero_division',False)
+    if kwargs:  # pop이 안되고 남아있을 경우 원하지 않는 키워드를 받았다고 생각하 에러를 발생
+        raise TypeError('Unexcpected **kwargs: %r' %kwargs)
+    ...
+print_args(1, 0, False, True) # 오류발생
+```
