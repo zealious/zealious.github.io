@@ -2,8 +2,9 @@
 title: "공개 속성보다는 비공개 속성을 사용하자"
 tag : Python
 ---
-
+```
 파이썬에는 클래스 속성의 가시성(visibility)이 공개(public)와 비공개(private)두 유형밖에 없다.  
+```
 ```python
 class MyObject(object):
     def __init__(self):
