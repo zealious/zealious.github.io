@@ -75,7 +75,8 @@ dollar_spam.close()
 2가지의 차이점
 > readline 사용을 권장  
 > readlines는 데이터가 클 경우 메모리 문제 발생(파일이 작을때 주로 사용)
-```
+
+```python
 # readline - 한 라인식
 f = open('file.txt', 'r')
 while True:
