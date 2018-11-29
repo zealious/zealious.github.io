@@ -1,5 +1,5 @@
 ---
-title: "파일 다"
+title: "파일 다루기"
 tag : 
    - Python 
 ---
