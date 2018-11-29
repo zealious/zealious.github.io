@@ -69,3 +69,5 @@ baconfFile.write('Bacon is not a vegetable.')
 baconFile.close()
 send2trash.send2trash('bcon.txt')
 ```
+
+## 디렉토리 트리 운행
