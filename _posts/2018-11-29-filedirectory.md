@@ -71,6 +71,7 @@ send2trash.send2trash('bcon.txt')
 ```
 
 ## 디렉토리 트리 운행
+
 ```python
 import os
 
@@ -83,4 +84,4 @@ for folder_name, subfolders, filenames in os.walk('C:\\delicious'):
         print('FILE INSIDE ' + folder_name + ' : ' + filename)
         
     print('')
-``
+```
