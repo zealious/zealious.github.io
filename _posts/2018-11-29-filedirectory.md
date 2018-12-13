@@ -85,3 +85,30 @@ for folder_name, subfolders, filenames in os.walk('C:\\delicious'):
         
     print('')
 ```
+
+## zipfile 모듈을 이용하여 파일 압축과 풀기
+```python
+
+# 압축 된 내용보기
+import zipfile, os
+
+exampleZip = zipfile.ZipFile('example.zip')   # zip파일의 객체 생성
+exampleZip.namelist()                         # 압축된 내용 리스트로 리턴
+>>> ['spam.txt', 'cats/']
+spamInfo = exampleZip.getinfo('spam.txt')
+spamInfo.file_size
+spamInfo.compress_size
+exampleZip.close()
+
+# 압축하기 
+# 'w' 모드를 사용하여 새로운파일을 만들고 기존에 있으면 내용이 지워진다.
+# 'a' 컨텐츠 추가 모드
+newZip = zipfile.ZipFile('new.zip', 'w')
+newZip.write('spam.txt', compress_type=zipfile.ZIP_DEFLATED)
+newZip.close()
+
+#압축 풀기
+exampleZip.extractall()
+exampleZip.close()
+
+```
