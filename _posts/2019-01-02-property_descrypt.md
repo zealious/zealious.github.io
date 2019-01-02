@@ -11,7 +11,7 @@ tag :
 예를들어 math, writting, science의 등급을 매긴다고할 떄 property를 사용하게되면 코드가  
 굉장히 길어진다. 이런 경우 디스크립터를 사용하는 것이다.
 
-```
+```python
 class Grade():
     def __init__(self):
         self._value = 0
@@ -41,7 +41,7 @@ print(exam.writing_grade)
 
 위코드를 아래와 같이 실행해보면 불행히도 제대로 동자갛지 않을 것이다.
 한 Exam 인스턴스에 있는 여러 속성에 접근하는것은 기대한대로 동작할것이다.
-```
+```python
 first_exam = Exam()
 first_exam.writing_grade = 82
 first_exam.science_grade = 92
