@@ -28,7 +28,7 @@ res.json
  * HTML(XML)을 파싱하게 좋게 파이썬 객체로 돌려준다.
  * 잘못된 HTML을 수정하여 반환해줌
 
-# Tag 객체
+### Tag 객체
 ```pyton
 pip install beautifulsoup4
 
@@ -45,7 +45,7 @@ div_tag = soup.div
 div_tag
 ```
 
-# NavigableString 객체
+### NavigableString 객체
  * .string vs .text
    * .string : td태크모두리턴
 
@@ -54,7 +54,7 @@ div_tag
 ## 원하는 데이터 추출하기
  * 특정 데이터를 추출하기 위해서는 해당 데이터를 포함하는 태그를 찾아야한다.
 
-# find()와 find_all()
+### find()와 find_all()
  * BeautifulSoup에서 가장 자주 쓰이는 함수
  * HTML 페이지에서 원하는 태그를 다양한 속성에 따라 쉽게 필터링 할 수 있음.
 ```python
