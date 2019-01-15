@@ -29,7 +29,7 @@ res.json
  * 잘못된 HTML을 수정하여 반환해줌
 
 ### Tag 객체
-```pyton
+```python
 pip install beautifulsoup4
 
 import requests
