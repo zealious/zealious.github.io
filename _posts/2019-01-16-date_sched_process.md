@@ -67,3 +67,20 @@ wc8.strftime('%I:%M %p')
 wc8.strftime("%B of '%y")
 >>> "June of '02"
 ```
+
+
+## 다른 프로그램 실행
+  ### subprocess 모듈사용(어플리케이션 실행)
+  ```python
+  import subprocess
+  subprocess.Popen('C:\\Window\\Syste32\\calc.exe')
+  
+  #OS 가 우분투일때
+ subprocess.Popen('/usr/bin/gnome-calculator')
+ 
+ subprocess.Popen(['C:\\python34\\python.exe, 'hello.py'])
+ #기본 프로그램으로 파일 열기
+ subprocess.Popen(['start', 'hello.txt'], shell=True)
+ 
+ subprocess.Poen(['python.exe', 'hello.py'])
+  ```
