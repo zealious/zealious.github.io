@@ -20,7 +20,7 @@ class MyChildClass(MyBaseClass):
 class TimeFive(MyBaseClass):
     def __init__(self, value):
         MyBaseClass.__init__(self, value)
-        self.value += 2
+        self.value *= 5
 
 class PlusTwo(MyBaseClass):
     def __init__(self, value):
@@ -54,7 +54,7 @@ class TimesFiveCorrect(MyBaseClass):
 
 class PlusTwoCorrect(MyBaseClass):
     def __init__(self, value):
-        super(TimesFiveCorrect, self).__init__(value)
+        super(PlusTwoCorrect, self).__init__(value)
         self.value += 2
 
 class GoodWay(TimesFiveCorrect, PlusTwoCorrect):
