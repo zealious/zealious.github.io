@@ -14,6 +14,7 @@ tag :
  
 ## BeautifulSoup 사용법
  * 설치
+ 
 ```python
 pip install bs4
 
@@ -21,10 +22,10 @@ pip install bs4
 # find("태그", {"클래스" : "클래스명"})), findAll() 차이
 # find()는 찾고자하는 tag의 첫번째 항목만 가져온다. 
 # findAll() 찾고자하는 tag의 모든항목을 가져온다 LIST형태로 리턴
-
 ```
 
  * 간단한 예제
+
 ```python
 # Naver Main Crawling
 
@@ -44,7 +45,8 @@ print(first_a.text)
 ```
 
  * 삼성주식(종가/시가/고가/저가 가져오기)
- ```python
+ 
+```python
 import requests
 from bs4 import BeautifulSoup
 
@@ -71,4 +73,4 @@ def get_candle_chart_data(bs4_obj):
 
 
 print(get_candle_chart_data(get_bs_obj("005930")))
- ```
+```
