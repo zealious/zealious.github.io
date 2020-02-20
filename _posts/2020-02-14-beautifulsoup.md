@@ -22,6 +22,27 @@ pip install bs4
 # find("태그", {"클래스" : "클래스명"})), findAll() 차이
 # find()는 찾고자하는 tag의 첫번째 항목만 가져온다. 
 # findAll() 찾고자하는 tag의 모든항목을 가져온다 LIST형태로 리턴
+
+from bs4 import BeautifulSoup
+import requests
+
+url = ''
+html = requests.get(url)
+soup = BeautifulSoup(html,'html.parser')
+
+soup.select('원하는 정보')  # select('원하는 정보') -->  단 하나만 있더라도, 복수 가능한 형태로 되어있음
+
+soup.select('태그명')
+soup.select('.클래스명')
+soup.select('상위태그명 > 하위태그명 > 하위태그명')
+soup.select('상위태그명.클래스명 > 하위태그명.클래스명')    # 바로 아래의(자식) 태그를 선택시에는 > 기호를 사용
+soup.select('상위태그명.클래스명 하~위태그명')              # 아래의(자손) 태그를 선택시에는   띄어쓰기 사용
+soup.select('상위태그명 > 바로아래태그명 하~위태그명')     
+soup.select('.클래스명')
+soup.select('#아이디명')
+soup.select('태그명.클래스명)
+soup.select('#아이디명 > 태그명.클래스명)
+soup.select('태그명[속성1=값1]')
 ```
 
  * 간단한 예제
