@@ -2,6 +2,8 @@
 title: "웹스크레이핑"
 tag : 
    - Python 
+   - BeautifulSoup
+   - requests
 ---
 
 ## Scraper란?
