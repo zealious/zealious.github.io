@@ -27,11 +27,13 @@ from bs4 import BeautifulSoup
 import requests
 
 url = ''
-html = requests.get(url)
+
+html = requests.get(url).text
+# Response에서 리턴된 데이타를 문자열로 리턴하는 text 속성이 있으며
+# Response 데이타를 바이트(bytes)로 리턴하는 content 속성 등이 있다.
 soup = BeautifulSoup(html,'html.parser')
 
 soup.select('원하는 정보')  # select('원하는 정보') -->  단 하나만 있더라도, 복수 가능한 형태로 되어있음
-
 soup.select('태그명')
 soup.select('.클래스명')
 soup.select('상위태그명 > 하위태그명 > 하위태그명')
@@ -41,7 +43,7 @@ soup.select('상위태그명 > 바로아래태그명 하~위태그명')
 soup.select('.클래스명')
 soup.select('#아이디명')
 soup.select('태그명.클래스명)
-soup.select('#아이디명 > 태그명.클래스명)
+soup.select('#아이디명 > 태그명.클래스명')
 soup.select('태그명[속성1=값1]')
 ```
 
