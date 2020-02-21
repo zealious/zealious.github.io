@@ -2,6 +2,9 @@
 title: "날짜, 스케쥴링, 프로세스 "
 tag : 
    - Python 
+   - time
+   - datetime
+   - subprocess
 ---
 
 
