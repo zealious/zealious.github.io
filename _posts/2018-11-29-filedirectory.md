@@ -1,7 +1,11 @@
 ---
 title: "파일과 디렉토리 다루기"
 tag : 
-   - Python 
+   - Python
+   - pickle
+   - shutil
+   - directory
+   - zipfile
 ---
 
 ## pickle 모듈
