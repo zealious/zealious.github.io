@@ -33,9 +33,26 @@ new_img = im.croup((100, 100, 500, 500))  # 가로시작점, 세로시작점, �
 # 이미지 붙이기
 im.paste(new_img, (0, 0))
 
-#사이즈변경
+# 사이즈변경
 im.resize((100,100)) # tuple형태의 인자값
 
+# 회전하기
+im.rotate(45)   # 45도 회전
+
+# Filter 효과
+img.filter(ImageFilter.BLUR)  # 아래효과 중 선택
+"""
+BLUR
+CONTOUR
+DETAIL
+EDGE_ENHANCE
+EDGE_ENHANCE_MORE
+EMBOSS
+FIND_EDGES
+SMOOTH
+SMOOTH_MORE
+SHARPEN
+"""
 ```
  
 ## 네이버 웹툰 이미지 다운받아보기
