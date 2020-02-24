@@ -27,6 +27,9 @@ print(im.mode)                  # RGB, RGBA, YmCK, Gray 등 색상컬러 정보
 # 이미지 열기
 im.show()
 
+# 이미지 생성하기
+Image.new("RGB", (width, height), (200,200,200)) # 모드, 사이즈, 바탕색(default 검은색)
+
 # 이미지 자르기
 new_img = im.croup((100, 100, 500, 500))  # 가로시작점, 세로시작점, 가로범위, 세로범위
 
