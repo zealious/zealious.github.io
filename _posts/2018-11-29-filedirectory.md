@@ -10,7 +10,9 @@ tag :
 
 ## pickle 모듈
 ```python
-# 리스트나 클래스를 파일에 저장할 때 사용
+# LIST, Dict, Class를 파일에 저장할 때 사용
+# pickle 모듈을 사용할 때 주의할 점은 데이터를 저장, 불러올 때에 파일 형식을 바이트(b) 형식으로 읽고 써야 한다는 점이다.
+
 import pickle
 
 colors = ['red', 'green', 'black']
