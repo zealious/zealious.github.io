@@ -13,6 +13,8 @@ tag :
 # LIST, Dict, Class를 파일에 저장할 때 사용
 # pickle 모듈을 사용할 때 주의할 점은 데이터를 저장, 불러올 때에 파일 형식을 바이트(b) 형식으로 읽고 써야 한다는 점이다.
 # pickle의 장점 https://korbillgates.tistory.com/173
+# 바이너리와 텍스트 차이 이해 
+# https://m.blog.naver.com/PostView.nhn?blogId=tipsware&logNo=221353023593&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 import pickle
 
 colors = ['red', 'green', 'black']
