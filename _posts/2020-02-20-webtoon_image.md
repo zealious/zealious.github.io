@@ -19,7 +19,7 @@ pip install pillow
 
 from PIL import Image as PILImage
 
-im = PILImage.open('test.png")  # PILImage로 image 열기
+im = PILImage.open("test.png")  # PILImage로 image 열기
 print(im.format)                # bmp, jpeg, png, gif
 print(im.size)                  # (width, height) tuple형태
 print(im.mode)                  # RGB, RGBA, YmCK, Gray 등 색상컬러 정보
