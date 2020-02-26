@@ -161,7 +161,7 @@ for img_tag in bs4_obj.select('.wt_viewer img'):
 
 # 65000사이즈를 넘지않게 리사이징하는 과정 
 # 65000을 넘지않을경우 기존 파일 그대로 리턴
-def height_max_check(img_name_list, sum_height):
+def height_max_check(img_name_list):
     # open_img = []
     # for filename in img_name_list:
     #     open_img.append(PILImage.open(filename))
@@ -180,7 +180,7 @@ def height_max_check(img_name_list, sum_height):
     return open_img
 
 
-open_img = height_max_check(img_name_list, sum_height)
+open_img = height_max_check(img_name_list)
 
 # print(open_img[0].size)
 # print(open_img[0].width)
