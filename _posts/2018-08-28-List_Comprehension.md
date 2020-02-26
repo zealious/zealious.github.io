@@ -1,6 +1,12 @@
 ---
 title: "map과 filter대신 리스트 컴프리헨션을 사용하자 + generator"
-tag : Python
+tag : 
+   - Python 
+   - lambda
+   - map
+   - filter
+   - generator
+   - list comprehension
 ---
 
 ## lambda함수
