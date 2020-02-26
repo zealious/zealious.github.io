@@ -108,7 +108,7 @@ c = [x for x in a if x > 4 and x % 2 == 0]
 * 표현식에서 한 번에 한 아이템을 내주는 이터레이터로 평가된다.
 * 제너레이터표현식은 ()문자사이에 리스트 컴프리헨션과 비슷한 문법을 사용하여 생성한다.
 
-![My helpful screenshot](/_posts/generator_relation.png)
+![My helpful screenshot](https://github.com/zealious/zealious.github.io/raw/master/_posts/generator_relation.png)
 
 ```python
 it = (len(x) for x in open('/tmp/my_file.txt'))
