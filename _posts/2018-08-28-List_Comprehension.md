@@ -102,14 +102,15 @@ c = [x for x in a if x > 4 and x % 2 == 0]
 
 
 ## 입력이 클때는 제너레이터 표현식을 고려하자
-
+* 제너레이터를 알기전 iterable과 iterator의 의미를 파악해보자
+* https://bluese05.tistory.com/55
 * 제너레이터 표현식은 실행될 때 출력 시퀀스를 모두 구체화(메모리에 로딩)하지 않는다.
 * 표현식에서 한 번에 한 아이템을 내주는 이터레이터로 평가된다.
 * 제너레이터표현식은 ()문자사이에 리스트 컴프리헨션과 비슷한 문법을 사용하여 생성한다.
 
 
 ```python
-it (len(x) for x in open('/tmp/my_file.txt'))
+it = (len(x) for x in open('/tmp/my_file.txt'))
 print(it)
 
 >>>
