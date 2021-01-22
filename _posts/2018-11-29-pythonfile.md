@@ -2,6 +2,12 @@
 title: "파일 다루기"
 tag : 
    - Python 
+   - file
+   - path
+   - directory
+   - open
+   - with
+   - sys.argv
 ---
 
 ## 파일과 파일경로
@@ -92,7 +98,24 @@ for line in lines:
     print(line)
 f.close()
 
+# with 와 함께쓰면 close할 필요가 없다.
 with open('file.txt', 'w') as f:
     f.write('test')
 ```
 
+
+```python
+# 명령 프롬프트창에서 매개변수를 직접 주어 프로그램을 실행하는방식
+# 명령 프롬프트 명령어 [인수1 인수2 ...]
+
+#sys1.py
+import sys
+
+args = sys.argv[1:]
+for i in args:
+    print(i)
+    
+# python sys1.py   aaa     bbb 
+         argv[0] argv[1]  argv[2]
+
+```
