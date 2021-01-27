@@ -6,6 +6,8 @@ tag :
    - shutil
    - directory
    - zipfile
+   - os
+   - send2trash
 ---
 
 ## pickle 모듈
